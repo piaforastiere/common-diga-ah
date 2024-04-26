@@ -17,7 +17,7 @@ export const ContentPhone = styled.div<InputPhoneProps>`
     font-size: 14px;
     outline: #8e92bc;
     width: 100%;
-    border: ${(props: { full: boolean }) =>
+    border: ${(props) =>
       props.full ? '1px solid #08A8D2' : 'none'};
     outline: none;
     height: 'auto';

@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, ReactElement, ChangeEvent } from 'react'
+import { Dispatch, SetStateAction, ReactElement, ChangeEvent, FocusEvent } from 'react'
 
 import { Dayjs } from 'dayjs'
 
@@ -27,6 +27,7 @@ export interface HeaderProps {
 
 export interface InlineMenuHeaderProps {
   userType: string
+  menu: string[]
   editionMode: boolean
   modalStatus: boolean
   setModalStatus: Dispatch<SetStateAction<boolean>>
@@ -35,7 +36,7 @@ export interface InlineMenuHeaderProps {
 export interface InlineMenuNoButtonProps {
   userType: string
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  menu: any
+  menu: string[]
   editing?: boolean
 }
 
@@ -104,7 +105,7 @@ export interface InputProps {
   inputClass?: string
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void
   onClick?: (e: MouseEvent) => void
-  onBlur?: (e: FocusEvent) => void
+  onBlur?: (e: FocusEvent<HTMLInputElement>) => void;
   onFocus?: (e: FocusEvent) => void
   readOnly?: true
   full?: boolean | string

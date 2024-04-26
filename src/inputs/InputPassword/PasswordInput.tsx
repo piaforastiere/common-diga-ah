@@ -2,8 +2,18 @@ import React, { ChangeEvent, SetStateAction, Dispatch } from 'react';
 
 import { RiEyeCloseLine, RiEyeLine } from 'react-icons/ri';
 
-import { Input } from '../..';
 import { translateFieldName } from '../../forms/utils';
+import { Input } from 'inputs';
+
+export interface PasswordInputProps {
+  fieldName: string;
+  fieldValue: string;
+  showPassword: boolean;
+  showPasswordConfirm: boolean;
+  handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  setShowPassword: Dispatch<SetStateAction<boolean>>;
+  setShowPasswordConfirm: Dispatch<SetStateAction<boolean>>;
+}
 
 const PasswordInput = ({
   fieldName,
@@ -13,15 +23,7 @@ const PasswordInput = ({
   handleChange,
   setShowPassword,
   setShowPasswordConfirm,
-}: {
-  fieldName: string;
-  fieldValue: string;
-  showPassword: boolean;
-  showPasswordConfirm: boolean;
-  handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
-  setShowPassword: Dispatch<SetStateAction<boolean>>;
-  setShowPasswordConfirm: Dispatch<SetStateAction<boolean>>;
-}) => {
+}: PasswordInputProps) => {
   return (
     <div className="content-password">
       <Input

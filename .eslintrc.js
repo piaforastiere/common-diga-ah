@@ -1,15 +1,15 @@
 
 module.exports = {
   parser: '@typescript-eslint/parser',
-  extends: [
-    'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:styled-components-a11y/recommended',
-    'prettier',
-    'prettier/@typescript-eslint',
-    'plugin:prettier/recommended',
+  extends: ['eslint:recommended',
+  'plugin:react/recommended', 
+  'plugin:@typescript-eslint/recommended', 
+  'plugin:styled-components-a11y/recommended', 
+  'prettier/react', 
+  'prettier/@typescript-eslint', 
+  'plugin:prettier/recommended', 
   ],
-  plugins: ['@typescript-eslint', 'react', 'styled-components-a11y', 'prettier'],
+  plugins: ['@typescript-eslint', 'react', 'styled-components-a11y', 'prettier', 'mdx'],
   env: {
     browser: true,
     es6: true,

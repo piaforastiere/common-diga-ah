@@ -1024,7 +1024,7 @@ position: relative;
     position: absolute;
     content: "";
     border-bottom: 2px solid #08a8d2;
-    width: ${(props: { widthPercentage: string }) => (props.widthPercentage ? props.widthPercentage : '0')}%;
+    width: ${(props) => (props.widthPercentage ? props.widthPercentage : '0')}%;
     top: 12px;
     left: 50%;
     z-index: 3;

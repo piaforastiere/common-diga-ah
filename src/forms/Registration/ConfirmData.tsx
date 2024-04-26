@@ -1,12 +1,14 @@
-import React, { FormEvent } from 'react';
+import React from 'react';
 
 import { RegistrationForm } from '../../types';
 
 import { LetterLabelTitle, LetterLabel } from './styles';
 import { calculateInputWidth } from '../utils';
-import { DarkGreyButton, Input } from '../..';
+import { Input } from 'inputs';
+import { DarkGreyButton } from 'buttons';
 
-interface ConfirmDataProps {
+
+export interface ConfirmDataProps {
   formData: RegistrationForm;
   //   sendData: (e: FormEvent<HTMLFormElement>) => Promise<void>;
 }

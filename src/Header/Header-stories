@@ -1,0 +1,51 @@
+// // Header.stories.tsx
+// import React, { useState } from 'react';
+// import { StoryFn, Meta } from '@storybook/react';
+// import Header from './Header';
+// import { HeaderProps } from '../types';
+// import annabel from '../assets/annabel.png'
+
+// export default {
+//   title: 'Components/Header',
+//   component: Header,
+// } as Meta;
+
+// const Template: StoryFn<HeaderProps> = (args) => {
+//   const [modalStatus, setModalStatus] = useState(false);
+//   const [editionMode, setEditionMode] = useState(false);
+
+//   return (
+//     <Header
+//       {...args}
+//       modalStatus={modalStatus}
+//       setModalStatus={setModalStatus}
+//       editionMode={editionMode}
+//     />
+//   );
+// };
+
+// export const Default = Template.bind({});
+// Default.args = {
+//   title: 'Dashboard',
+//   profileImage: '',
+//   modalStatus: false,
+//   editionMode: false,
+// };
+
+// export const WithProfileImage = Template.bind({});
+// WithProfileImage.args = {
+//   ...Default.args,
+//   profileImage: annabel, // Assuming annabel is an actual import or path to an image
+// };
+
+// export const EditionModeEnabled = Template.bind({});
+// EditionModeEnabled.args = {
+//   ...Default.args,
+//   editionMode: true,
+// };
+
+// export const ModalStatusOpen = Template.bind({});
+// ModalStatusOpen.args = {
+//   ...Default.args,
+//   modalStatus: true,
+// };
