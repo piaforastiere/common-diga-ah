@@ -1,0 +1,33 @@
+{
+  "name": "common-diga-ah",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc -p .",
+    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}' --quiet",
+    "lint:fix": "eslint 'src/**/*.{js,jsx,ts,tsx}' --quiet --fix",
+    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,md}'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": ">=16.11.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "eslint": "^9.1.1",
+    "prettier": "^3.2.5",
+    "react": "^18.3.0",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@fontsource/plus-jakarta-sans": "^5.0.20",
+    "dayjs": "^1.11.10",
+    "react-icons": "^5.1.0",
+    "react-phone-number-input": "^3.4.1"
+  }
+}
