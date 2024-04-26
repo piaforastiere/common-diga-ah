@@ -9,7 +9,10 @@
     "build": "npx tsc -p .",
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}' --quiet",
     "lint:fix": "eslint 'src/**/*.{js,jsx,ts,tsx}' --quiet --fix",
-    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,md}'"
+    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,md}'",
+    "prepublish": "npm run build",
+    "publish": "npm run prepublish && npm publish",
+    "release": "npm version patch && npm run publish"
   },
   "keywords": [],
   "author": "",
