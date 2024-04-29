@@ -153,3 +153,4 @@ export type RegistrationForm = {
   actividad1: string
   confirmData: any //ver este dato
 }
+

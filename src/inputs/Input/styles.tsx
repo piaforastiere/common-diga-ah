@@ -11,11 +11,11 @@ export const InputContainer = styled.input<InputProps>`
   font-weight: 500;
   font-size: 14px;
   outline: #8e92bc;
-  width: ${(props: { width: string }) => (props.width ? props.width : '100%')};
-  border: ${(props: { full: boolean }) =>
+  width: ${(props) => (props.width ? props.width : '100%')};
+  border: ${(props) =>
     props.full ? '1px solid #08A8D2' : 'none'};
   outline: none;
-  height: ${(props: { height: string }) =>
+  height: ${(props) =>
     props.height ? `${props.height}px` : 'auto'};
   &::placeholder {
     color: #8e92bc;

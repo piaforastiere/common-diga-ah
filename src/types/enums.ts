@@ -54,3 +54,5 @@ export const listHeads = {
     'Ultima Clase',
   ],
 }
+
+

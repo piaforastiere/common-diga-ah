@@ -2,12 +2,12 @@ import React, { useEffect, useState, ChangeEvent } from 'react';
 
 import dayjs from 'dayjs';
 
-import { Input, DarkGreyButton } from '../..';
-import { InputPhone, PasswordInput, PasswordRules } from '../../inputs';
 import { RegistrationForm } from '../../types';
 
 import { LetterLabel } from './styles';
 import { translateFieldName } from '../utils';
+import { Input, InputPhone, PasswordInput, PasswordRules } from 'inputs';
+import { DarkGreyButton } from 'buttons';
 
 interface StepOneProps {
   setStepNumber: (step: number) => void;
