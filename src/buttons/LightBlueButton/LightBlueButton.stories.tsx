@@ -3,8 +3,6 @@ import React from 'react';
 import LightBlueButton from './LightBlueButton';
 import { LightBlueProps } from 'types';
 
-
-
 export default {
   title: 'Components/Buttons/LightBlueButton',
   component: LightBlueButton,
@@ -19,7 +17,7 @@ export default {
   },
 } as Meta;
 
-const Template: StoryFn<typeof LightBlueButton> = (args : LightBlueProps) => (
+const Template: StoryFn<typeof LightBlueButton> = (args: LightBlueProps) => (
   <LightBlueButton {...args} />
 );
 

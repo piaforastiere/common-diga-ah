@@ -3,7 +3,8 @@ import React, { ChangeEvent, SetStateAction, Dispatch } from 'react';
 import { RiEyeCloseLine, RiEyeLine } from 'react-icons/ri';
 
 import { translateFieldName } from '../../forms/utils';
-import { Input } from 'inputs';
+import Input from '../Input/Input';
+import { ContentPassword } from './styles';
 
 export interface PasswordInputProps {
   fieldName: string;
@@ -25,7 +26,7 @@ const PasswordInput = ({
   setShowPasswordConfirm,
 }: PasswordInputProps) => {
   return (
-    <div className="content-password">
+    <ContentPassword>
       <Input
         id={`${fieldName}register`}
         name={fieldName}
@@ -40,7 +41,7 @@ const PasswordInput = ({
           .trim()}
         value={fieldValue}
         onChange={handleChange}
-        full={fieldValue}
+        width={`calc(100% - 33px)`}
       />
       {fieldName === 'password' ? (
         !showPassword ? (
@@ -71,7 +72,7 @@ const PasswordInput = ({
           />
         )
       ) : null}
-    </div>
+    </ContentPassword>
   );
 };
 

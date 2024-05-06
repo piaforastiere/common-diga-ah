@@ -7,7 +7,6 @@ import { calculateInputWidth } from '../utils';
 import { Input } from 'inputs';
 import { DarkGreyButton } from 'buttons';
 
-
 export interface ConfirmDataProps {
   formData: RegistrationForm;
   //   sendData: (e: FormEvent<HTMLFormElement>) => Promise<void>;

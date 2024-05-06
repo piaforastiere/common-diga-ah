@@ -3,15 +3,14 @@ import React from 'react';
 import { StoryFn, Meta } from '@storybook/react';
 import SectionSubtitle, { SectionSubtitleProps } from './SectionSubtitle';
 
-
-
-
 export default {
   title: 'Components/texts/SectionSubtitle',
   component: SectionSubtitle,
 } as Meta;
 
-const Template: StoryFn<SectionSubtitleProps> = (args) => <SectionSubtitle {...args} />;
+const Template: StoryFn<SectionSubtitleProps> = args => (
+  <SectionSubtitle {...args} />
+);
 
 export const Default = Template.bind({});
 Default.args = {

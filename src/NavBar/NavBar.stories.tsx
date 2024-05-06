@@ -4,14 +4,11 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { StoryFn, Meta } from '@storybook/react';
 import NavBar from './NavBar';
 
-
-
-
 export default {
   title: 'Components/Navbar',
   component: NavBar,
   decorators: [
-    (Story) => (
+    Story => (
       <Router>
         <Story />
       </Router>
@@ -19,7 +16,7 @@ export default {
   ],
 } as Meta;
 
-const Template: StoryFn<{userType : string}> = (args) => <NavBar {...args} />;
+const Template: StoryFn<{ userType: string }> = args => <NavBar {...args} />;
 
 export const GuestUser = Template.bind({});
 GuestUser.args = {

@@ -3,8 +3,6 @@ import React from 'react';
 import { DarkGreyButtonProps } from '../../types';
 import { DarkGreyButtonContainer } from '../styles';
 
-
-
 const DarkGreyButton = ({
   onClick,
   children,

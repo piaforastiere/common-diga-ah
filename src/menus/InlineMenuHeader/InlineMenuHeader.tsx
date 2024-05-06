@@ -1,12 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-import { GrAdd } from 'react-icons/gr'
-import { useNavigate, useParams } from 'react-router-dom'
+import { GrAdd } from 'react-icons/gr';
+import { useNavigate, useParams } from 'react-router-dom';
 
-
-import { NavbarContainer, NavbarLinkContainer, NavbarLink } from '../styles'
-import { AdminMenu, InlineMenuHeaderProps } from '../../types'
-import { capitalizeFirstLetter } from '../utils'
+import { NavbarContainer, NavbarLinkContainer, NavbarLink } from '../styles';
+import { AdminMenu, InlineMenuHeaderProps } from '../../types';
+import { capitalizeFirstLetter } from '../utils';
 
 const InlineMenuHeader = ({
   // userType,
@@ -15,15 +14,15 @@ const InlineMenuHeader = ({
   modalStatus,
   setModalStatus,
 }: InlineMenuHeaderProps) => {
-  const navigate = useNavigate()
-  const { user } = useParams<{ user: string }>()
+  const navigate = useNavigate();
+  const { user } = useParams<{ user: string }>();
   const openModal = () => {
-    setModalStatus(!modalStatus)
-  }
+    setModalStatus(!modalStatus);
+  };
 
   const handleClick = (item: string) => {
-    navigate(`/administration/${item}`)
-  }
+    navigate(`/administration/${item}`);
+  };
 
   return (
     <NavbarContainer>
@@ -39,7 +38,7 @@ const InlineMenuHeader = ({
               >
                 {capitalizeFirstLetter(item)}
               </NavbarLink>
-            )
+            );
           } else {
             return (
               <NavbarLink
@@ -50,12 +49,12 @@ const InlineMenuHeader = ({
                 <GrAdd />
                 Agregar Bono
               </NavbarLink>
-            )
+            );
           }
         })}
       </NavbarLinkContainer>
     </NavbarContainer>
-  )
-}
+  );
+};
 
-export default InlineMenuHeader
+export default InlineMenuHeader;

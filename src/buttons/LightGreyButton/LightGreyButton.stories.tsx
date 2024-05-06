@@ -3,8 +3,6 @@ import React from 'react';
 import LightGreyButton from './LightGreyButton';
 import { LightGreyProps } from 'types';
 
-
-
 export default {
   title: 'Components/Buttons/LightGreyButton',
   component: LightGreyButton,
@@ -14,7 +12,7 @@ export default {
     fontWeight: 500,
     padding: '8px 10px',
     height: 40,
-    onClick: '() => void' as unknown as any
+    onClick: '() => void' as unknown as any,
   },
 } as Meta;
 

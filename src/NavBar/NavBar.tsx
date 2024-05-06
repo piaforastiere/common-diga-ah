@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 // import { AiOutlineAppstore } from 'react-icons/ai'
 // import { Link, NavLink } from 'react-router-dom'
@@ -14,7 +14,7 @@ import {
   NavbarContainer,
   NavbarLinkContainer,
   NavbarLink,
-} from './styles'
+} from './styles';
 
 // import Help from "./Help";
 
@@ -93,5 +93,5 @@ export default function NavBar({ userType }: { userType: string }) {
     // 		{/* <Help /> */}
     // 	</div>
     // </NavBarContainer>
-  )
+  );
 }

@@ -1,9 +1,8 @@
-
-import React  from 'react';
+import React from 'react';
 import { StoryFn, Meta } from '@storybook/react';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 
-import {  InlineMenuNoButtonProps } from '../../types';
+import { InlineMenuNoButtonProps } from '../../types';
 import InlineMenuNoButton from './InlineMenuNoButton';
 
 //agregar el modal
@@ -12,7 +11,7 @@ export default {
   title: 'Components/menus/InlineMenuNoButton',
   component: InlineMenuNoButton,
   decorators: [
-    (Story) => (
+    Story => (
       <MemoryRouter initialEntries={['/administration/user']}>
         <Routes>
           <Route path="/administration/:user" element={<Story />} />
@@ -22,13 +21,8 @@ export default {
   ],
 } as Meta;
 
-const Template: StoryFn<InlineMenuNoButtonProps> = (args) => {
-
-  return (
-    <InlineMenuNoButton
-      {...args}
-    />
-  );
+const Template: StoryFn<InlineMenuNoButtonProps> = args => {
+  return <InlineMenuNoButton {...args} />;
 };
 
 export const Default = Template.bind({});

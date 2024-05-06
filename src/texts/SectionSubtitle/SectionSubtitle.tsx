@@ -1,17 +1,17 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement } from 'react';
 
-import { SectionSubtitles } from '../styles'
+import { SectionSubtitles } from '../styles';
 
 export interface SectionSubtitleProps {
-  fontSize?: number
-  fontWeight?: number
-  id?: string
-  classSub?: string
-  lineHeight?: number
+  fontSize?: number;
+  fontWeight?: number;
+  id?: string;
+  classSub?: string;
+  lineHeight?: number;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  children?: ReactElement | string | any //reveer esto
+  children?: ReactElement | string | any; //reveer esto
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  onClick?: any
+  onClick?: any;
 }
 
 const SectionSubtitle = ({
@@ -34,7 +34,7 @@ const SectionSubtitle = ({
     >
       {children}
     </SectionSubtitles>
-  )
-}
+  );
+};
 
-export default SectionSubtitle
+export default SectionSubtitle;

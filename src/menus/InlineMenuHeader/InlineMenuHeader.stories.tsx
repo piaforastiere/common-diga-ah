@@ -11,7 +11,7 @@ export default {
   title: 'Components/menus/InlineMenuHeader',
   component: InlineMenuHeader,
   decorators: [
-    (Story) => (
+    Story => (
       <MemoryRouter initialEntries={['/administration/user']}>
         <Routes>
           <Route path="/administration/:user" element={<Story />} />
@@ -21,7 +21,7 @@ export default {
   ],
 } as Meta;
 
-const Template: StoryFn<InlineMenuHeaderProps> = (args) => {
+const Template: StoryFn<InlineMenuHeaderProps> = args => {
   const [modalStatus, setModalStatus] = useState(false);
   return (
     <InlineMenuHeader

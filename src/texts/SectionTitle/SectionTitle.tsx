@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-import { SectionTitles } from '../styles'
+import { SectionTitles } from '../styles';
 
 const SectionTitle = ({ text }: { text: string }) => {
-  return <SectionTitles>{text}</SectionTitles>
-}
+  return <SectionTitles>{text}</SectionTitles>;
+};
 
-export default SectionTitle
+export default SectionTitle;

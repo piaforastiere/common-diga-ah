@@ -1,26 +1,24 @@
-import React from 'react'
+import React from 'react';
 
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom';
 
-import { NavbarContainer, NavbarLinkContainer, NavbarLink } from '../styles'
-import { InlineMenuNoButtonProps } from 'types'
+import { NavbarContainer, NavbarLinkContainer, NavbarLink } from '../styles';
+import { InlineMenuNoButtonProps } from 'types';
 
 const InlineMenuNoButton = ({
   // userType,
   menu,
   editing,
 }: InlineMenuNoButtonProps) => {
-  const navigate = useNavigate()
-  const { user, part } = useParams<{ user: string; part: string }>()
-
-  
+  const navigate = useNavigate();
+  const { user, part } = useParams<{ user: string; part: string }>();
 
   const handleClick = (item: string) => {
     if (!editing) {
-      const param = item.toLocaleLowerCase()
-      navigate(`/administration/${user}/${param}`)
+      const param = item.toLocaleLowerCase();
+      navigate(`/administration/${user}/${param}`);
     }
-  }
+  };
   return (
     <NavbarContainer>
       <NavbarLinkContainer>
@@ -36,11 +34,11 @@ const InlineMenuNoButton = ({
             >
               {item}
             </NavbarLink>
-          )
+          );
         })}
       </NavbarLinkContainer>
     </NavbarContainer>
-  )
-}
+  );
+};
 
-export default InlineMenuNoButton
+export default InlineMenuNoButton;
