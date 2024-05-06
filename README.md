@@ -99,6 +99,8 @@ Here is a list of direct dependencies that may be useful to know about:
 - `dayjs`: Lightweight time formatter.
 - `react-icons`: Popular icon library for React.
 - `react-phone-number-input`: A phone number input component.
+- `dayjs`: Lightweight time formatter.
+- `@mui/x-date-pickers`: Date pickers for Material-UI.
 
 Make sure these are installed and accessible in your application if they are required in the consuming application for the complete functionality.
 
