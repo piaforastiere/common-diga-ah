@@ -1,59 +1,57 @@
+import { NavbarContainer, NavbarLink, NavbarLinkContainer } from '../styles';
+import { capitalizeFirstLetter } from '../utils';
 import React from 'react';
 
-import { NavbarContainer, NavbarLinkContainer, NavbarLink } from '../styles';
-import { capitalizeFirstLetter } from '../utils';
-
 export interface InlineMenuProps {
-  // userType?: string; // Removido por no utilizarse.
+  userType?: string;
   menuItems: string[];
-  activeFilter: string | string[];
+  activeFilter: string | string[] | null;
   isDisabled?: boolean;
-  setActiveFilter: (value: string | string[]) => void;
+  setActiveFilter: (value: string | string[] | null) => void;
 }
 
-const InlineMenu: React.FC<InlineMenuProps> = React.memo(
-  ({ menuItems, activeFilter, isDisabled, setActiveFilter }) => {
-    const handleClick = (item: string) => {
-      let newActiveFilter: string | string[] = item;
-      if (Array.isArray(activeFilter)) {
-        const isActive = activeFilter.includes(item);
-        newActiveFilter = isActive
-          ? activeFilter.filter(filterItem => filterItem !== item)
-          : [...activeFilter, item];
+const InlineMenu = ({
+  // userType,
+  menuItems,
+  activeFilter,
+  isDisabled,
+  setActiveFilter,
+}: InlineMenuProps) => {
+  const isActive = (item: string) => {
+    if (Array.isArray(activeFilter)) {
+      return activeFilter.includes(item);
+    }
+    return activeFilter === item;
+  };
+
+  const handleClick = (item: string) => {
+    if (Array.isArray(activeFilter)) {
+      if (activeFilter.includes(item)) {
+        setActiveFilter(activeFilter.filter(filterItem => filterItem !== item));
+      } else {
+        setActiveFilter([...activeFilter, item]);
       }
+    } else {
+      setActiveFilter(item);
+    }
+  };
 
-      setActiveFilter(newActiveFilter);
-    };
-
-    return (
-      <NavbarContainer>
-        <NavbarLinkContainer>
-          {menuItems.map(
-            (
-              item // Removemos 'i' y usamos 'item' como 'key'.
-            ) => (
-              <NavbarLink
-                key={item}
-                className={
-                  Array.isArray(activeFilter)
-                    ? activeFilter.includes(item)
-                      ? 'active'
-                      : ''
-                    : activeFilter === item
-                      ? 'active'
-                      : ''
-                }
-                onClick={() => handleClick(item)}
-                disabled={isDisabled}
-              >
-                {capitalizeFirstLetter(item)}
-              </NavbarLink>
-            )
-          )}
-        </NavbarLinkContainer>
-      </NavbarContainer>
-    );
-  }
-);
+  return (
+    <NavbarContainer>
+      <NavbarLinkContainer>
+        {menuItems.map((item, i) => (
+          <NavbarLink
+            key={i}
+            className={isActive(item) ? 'active' : ''}
+            onClick={() => handleClick(item)}
+            disabled={isDisabled}
+          >
+            {capitalizeFirstLetter(item)}
+          </NavbarLink>
+        ))}
+      </NavbarLinkContainer>
+    </NavbarContainer>
+  );
+};
 
 export default InlineMenu;

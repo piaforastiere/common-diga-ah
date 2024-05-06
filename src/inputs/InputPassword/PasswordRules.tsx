@@ -1,13 +1,13 @@
-import React from 'react'
+import React from 'react';
 
 const PasswordRules = ({
   uppercaseValid,
   numberValid,
   specialCharValid,
 }: {
-  uppercaseValid: boolean
-  numberValid: boolean
-  specialCharValid: boolean
+  uppercaseValid: boolean;
+  numberValid: boolean;
+  specialCharValid: boolean;
 }) => {
   return (
     <div className="containerInput">
@@ -30,7 +30,7 @@ const PasswordRules = ({
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default PasswordRules
+export default PasswordRules;

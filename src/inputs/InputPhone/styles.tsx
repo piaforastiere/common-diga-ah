@@ -1,7 +1,7 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-import '@fontsource/plus-jakarta-sans'
-import { InputPhoneProps } from '../../types'
+import '@fontsource/plus-jakarta-sans';
+import { InputPhoneProps } from '../../types';
 
 export const ContentPhone = styled.div<InputPhoneProps>`
   width: 100%;
@@ -17,8 +17,7 @@ export const ContentPhone = styled.div<InputPhoneProps>`
     font-size: 14px;
     outline: #8e92bc;
     width: 100%;
-    border: ${(props) =>
-      props.full ? '1px solid #08A8D2' : 'none'};
+    border: ${props => (props.full ? '1px solid #08A8D2' : 'none')};
     outline: none;
     height: 'auto';
     --PhoneInput-color--focus: transparent;
@@ -56,4 +55,4 @@ export const ContentPhone = styled.div<InputPhoneProps>`
       }
     }
   }
-`
+`;

@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import '@fontsource/plus-jakarta-sans'
+import styled from 'styled-components';
+import '@fontsource/plus-jakarta-sans';
 
 export const HeaderContainer = styled.div`
   display: flex;
@@ -9,14 +9,14 @@ export const HeaderContainer = styled.div`
   align-items: center;
   margin-bottom: 7px;
   font-family: 'Plus Jakarta Sans';
-`
+`;
 
 export const HeaderRow = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-`
+`;
 
 export const HeaderTitle = styled.div`
   width: calc(100% - 128px);
@@ -27,7 +27,7 @@ export const HeaderTitle = styled.div`
   letter-spacing: -0.72px;
   display: flex;
   justify-content: flex-start;
-`
+`;
 
 export const HeaderNotificationsContainer = styled.div`
   display: flex;
@@ -35,7 +35,7 @@ export const HeaderNotificationsContainer = styled.div`
   justify-content: space-between;
   width: 128px;
   align-items: center;
-`
+`;
 
 export const HeaderNotifications = styled.div`
   width: 52px;
@@ -50,7 +50,7 @@ export const HeaderNotifications = styled.div`
     width: 24px;
     height: auto;
   }
-`
+`;
 
 export const ProfileContainer = styled.div`
   display: flex;
@@ -88,7 +88,7 @@ export const ProfileContainer = styled.div`
       margin-right: 8px;
     }
   }
-`
+`;
 export const HeaderProfile = styled.div<{ profileImage: string }>`
   width: 52px;
   height: 52px;
@@ -99,4 +99,4 @@ export const HeaderProfile = styled.div<{ profileImage: string }>`
   background-image: ${(props: { profileImage: string }) =>
     `url(${props.profileImage})`};
   cursor: pointer;
-`
+`;

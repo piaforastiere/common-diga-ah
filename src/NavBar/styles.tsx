@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-import '@fontsource/plus-jakarta-sans'
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import '@fontsource/plus-jakarta-sans';
 
 export const NavbarContainer = styled.nav`
   width: 100%;
@@ -8,11 +8,11 @@ export const NavbarContainer = styled.nav`
   background-color: purple;
   display: flex;
   flex-direction: column;
-`
+`;
 
 export const NavbarLinkContainer = styled.div`
   display: flex;
-`
+`;
 export const NavbarLink = styled(Link)`
   color: white;
   font-size: x-large;
@@ -26,7 +26,7 @@ export const NavbarLink = styled(Link)`
   &:active {
     color: red;
   }
-`
+`;
 
 // export const NavBarContainer = styled.nav<{ admin: boolean }>`
 // 	background-color: ${(props) => (props.admin ? "#FFFFFF" : "#FFDC50")};

@@ -3,7 +3,6 @@ import { StoryFn, Meta } from '@storybook/react';
 import DarkGreyButton from './DarkGreyButton';
 import { DarkGreyButtonProps } from 'types';
 
-
 export default {
   title: 'Components/Buttons/DarkGreyButton',
   component: DarkGreyButton,
@@ -12,7 +11,9 @@ export default {
   },
 } as Meta;
 
-const Template: StoryFn<DarkGreyButtonProps> = (args : DarkGreyButtonProps) => <DarkGreyButton {...args} />;
+const Template: StoryFn<DarkGreyButtonProps> = (args: DarkGreyButtonProps) => (
+  <DarkGreyButton {...args} />
+);
 
 export const Default = Template.bind({});
 Default.args = {
@@ -29,4 +30,3 @@ Disabled.args = {
   isDisabled: true,
   children: 'Disabled',
 };
-

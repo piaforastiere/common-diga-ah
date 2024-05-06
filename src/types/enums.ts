@@ -53,6 +53,4 @@ export const listHeads = {
     'Vencimiento',
     'Ultima Clase',
   ],
-}
-
-
+};
