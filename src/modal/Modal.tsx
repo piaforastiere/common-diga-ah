@@ -10,11 +10,12 @@ const Modal = ({ isOpen, onClose, children }: ModalProps) => {
 
   return ReactDOM.createPortal(
     <>
-      <ModalOverlay onClick={onClose} />
-      <ModalContent>
-        <ModalClose onClick={onClose}>&times;</ModalClose>
-        {children}
-      </ModalContent>
+      <ModalOverlay onClick={onClose}>
+        <ModalContent>
+          <ModalClose onClick={onClose}>&times;</ModalClose>
+          {children}
+        </ModalContent>
+      </ModalOverlay>
     </>,
     document.body
   );
